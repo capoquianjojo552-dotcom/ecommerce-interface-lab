@@ -1,0 +1,147 @@
+
+:root {
+    --primary-color: #4a148c;   
+    --accent-color: #19c6d6;    
+    --bg-light: #fdf7ff;        
+    --text-main: #333333;
+    --card-bg: #ffffff;
+    --border-color: #dddddd;
+    --success-color: #4caf50;
+    --required-color: #3646f4;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+button, .button-link {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+input:focus, button:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+
+article {
+    display: inline-block;
+    width: 260px;
+    margin: 15px;
+    padding: 15px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+article:nth-child(odd) {
+    background-color: #fff;
+}
+
+article:nth-child(even) {
+    background-color: #f9f0ff;
+}
+
+.price::before {
+    content: "₱";
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.cart-container:empty {
+    padding: 50px;
+    border: 2px dashed #ccc;
+    background-color: #eee;
+    text-align: center;
+}
+
+.cart-container:empty::before {
+    content: "Your shopping bag is waiting to be filled!";
+    color: #888;
+    font-style: italic;
+}
+
+
+input:required {
+    border-left: 5px solid var(--required-color);
+}
+
+input:valid {
+    border-left: 5px solid var(--success-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table td:first-child {
+    font-weight: bold;
+    color: var(--primary-color);
+    width: 30%;
+}
+
+.order-list li::marker {
+    content: "📦 ";
+    color: var(--primary-color);
+}
+
+blockquote p::before {
+    content: open-quote;
+    font-size: 2em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+    color: var(--accent-color);
+}
+
+blockquote p::after {
+    content: close-quote;
+    font-size: 2em;
+    line-height: 0.1em;
+    margin-left: 0.1em;
+    vertical-align: -0.4em;
+    color: var(--accent-color);
+}
