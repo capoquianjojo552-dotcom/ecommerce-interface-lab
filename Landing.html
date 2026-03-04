@@ -2,29 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initia- scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Landing Page</title>
 </head>
 <body> 
     <header> 
+       <h1>ScentLab</h1>
        <nav>
          <ul> 
-            <li><a href="products.html">Featured Product</a></li>
-            <li><a href="">Discounted Product</a></li>
+            <li><a href="Landing.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
          </ul>
        </nav>
     </header>
-    <section>
+
+    <section class="hero">
         <h1>Welcome to ScentLab Store</h1>
-        <p>Discover my premium collection of ScentLab.</p>
-        <button>Shop Now</button>
+        <p>Discover our premium collection of luxury scents.</p>
+        <button onclick="location.href='products.html'">Shop Now</button>
     </section>
-    <section>
-        <h2>Featured Products</h2>
-        <p>Perfume</p>
-        <p>Alcohol</p>
-        <p>Alcohol Sanitizer</p>
+
+    <section style="padding: 40px; text-align: center;">
+        <h2>Our Categories</h2>
+        <div class="product-grid">
+            <article><h3>Perfume</h3></article>
+            <article><h3>Alcohol</h3></article>
+            <article><h3>Sanitizer</h3></article>
+        </div>
     </section>
 </body>
 </html>
