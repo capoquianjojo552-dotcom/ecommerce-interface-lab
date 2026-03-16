@@ -11,7 +11,6 @@ function checkVariable(input) {
     case "undefined":
       return "undefined";
     case "object":
-      // Since null is also an "object" in JS, this handles both cases.
       return "object";
     default:
       return "unknown";
